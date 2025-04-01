@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/articulo")
@@ -54,5 +55,17 @@ public class ArticuloController {
                     return ResponseEntity.ok(articulo);
                 }).orElse(ResponseEntity.notFound().build());
     }
+
+    public String metodoMalo(){
+        System.out.println("Esto es un mexican Logger");
+        int x = 0;
+        int y = 0;
+
+        // int multimplicación = y*x;
+        return "Hola"+y;
+    }
+
+
+
 
 }
